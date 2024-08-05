@@ -80,6 +80,11 @@ namespace KK_Plugins.MoreOutfits
             HSceneUI.HSceneUIInitialized = false;
         }
 
+        internal static void VRHScene_MapSameObjectDisable()
+        {
+            HSceneUI.HSceneUIInitialized = false;
+        }
+
         [HarmonyPostfix, HarmonyPatch(typeof(HSprite), nameof(HSprite.OnMainMenu))]
         private static void HSprite_OnMainMenu()
         {
